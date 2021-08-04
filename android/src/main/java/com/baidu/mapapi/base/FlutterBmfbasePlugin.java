@@ -1,5 +1,7 @@
 package com.baidu.mapapi.base;
 
+import android.util.Log;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +26,7 @@ public class FlutterBmfbasePlugin implements FlutterPlugin, MethodCallHandler {
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     final MethodChannel channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "flutter_bmfbase");
     channel.setMethodCallHandler(this);
+    Log.v("onAttachedToEngine","onAttachedToEngine");
   }
 
   // This static function is optional and equivalent to onAttachedToEngine. It supports the old
